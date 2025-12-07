@@ -35,9 +35,8 @@ class Product:
 
         self.quantity = quantity
 
-        if quantity == 0:
-            self.active = False
-
+        if self.quantity == 0:
+            self.deactivate()
 
     def is_active(self) -> bool:
         """
@@ -51,14 +50,14 @@ class Product:
         """
         Activates the product.
         """
-        self.activ = True
+        self.active = True
 
 
     def deactivate(self):
         """
         Deactivates the product.
         """
-        self.activ = False
+        self.active = False
 
 
     def show(self):
@@ -78,7 +77,8 @@ class Product:
         if self.quantity < quantity:
             raise QuantityError("Requested Quantity higher than availability.")
 
-        self.quantity -= quantity
+        new_quantity = self.quantity - quantity
+        self.set_quantity(new_quantity)
 
         return quantity * self.price
 
