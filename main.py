@@ -3,6 +3,9 @@ import store
 
 
 def print_menu():
+    """
+    Prints the menu options
+    """
     print("""
    Store Menu
    ----------
