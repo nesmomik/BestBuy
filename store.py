@@ -57,8 +57,11 @@ class Store:
         """
         total_price = 0
 
-        for product, quantity in shopping_list:
-            total_price += product.buy(quantity)
+        try:
+            for product, quantity in shopping_list:
+                total_price += product.buy(quantity)
+        except products.QuantityError as e:
+            print(e)
 
         return total_price
 
