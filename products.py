@@ -35,7 +35,7 @@ class Product:
         Setter function for quantity.
         If quantity reaches 0, deactivates the product.
         """
-        if type(quantity) is not int:
+        if quantity is not isinstance(int):
             raise TypeError("Quantity must be of type int.")
 
         if quantity < 0:
