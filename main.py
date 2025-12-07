@@ -99,7 +99,7 @@ def main():
         if choice in ["1", "2", "3"]:
             func_dict[choice](best_buy)
         elif choice == "4":
-            exit()
+            return
 
 
 if __name__ == "__main__":
