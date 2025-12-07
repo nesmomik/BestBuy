@@ -2,10 +2,17 @@ import products
 
 
 class StoreError(Exception):
+    """
+    Custom error class
+    """
     pass
 
 
 class Store:
+    """
+    Allows adding, removing, listing and ordering of
+    products of the class Product
+    """
     def __init__(self, product_list):
         self.product_list = product_list
 
@@ -67,6 +74,9 @@ class Store:
 
 
 def main():
+    """
+    Checks the basic functionality of the class Store
+    """
     product_list = [
         products.Product("MacBook Air M2", price=1450, quantity=100),
         products.Product(

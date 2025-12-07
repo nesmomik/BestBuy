@@ -1,8 +1,16 @@
 class QuantityError(Exception):
+    """
+    Custom error class
+    """
     pass
 
 
 class Product:
+    """
+    Allows to create products with the attributes name, price, quantity
+    and active.
+    Handles the process of buying products.
+    """
     def __init__(self, name, price, quantity):
         self.name: str = name
         self.price: float = price
@@ -85,6 +93,9 @@ class Product:
 
 
 def main():
+    """
+    Checks the basic functionality of the class Product
+    """
     mac = Product("MacBook Air M2", price=1450, quantity=100)
     bose = Product("Bose QuietComfort Earbuds", price=250, quantity=500)
 

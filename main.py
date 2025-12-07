@@ -77,6 +77,9 @@ func_dict = {
 
 
 def main():
+    """
+    Allows to assemble orders from a given product list
+    """
     product_list = [
         products.Product("MacBook Air M2", price=1450, quantity=100),
         products.Product("Bose QuietComfort Earbuds", price=250, quantity=500),
