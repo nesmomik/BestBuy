@@ -38,6 +38,7 @@ class Product:
         if self.quantity == 0:
             self.deactivate()
 
+
     def is_active(self) -> bool:
         """
         Getter function for active.
